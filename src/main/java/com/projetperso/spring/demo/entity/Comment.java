@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @EntityScan
-@Table(name = "users")
+@Table(name = "comments")
 public class Comment {
 
     @Id
