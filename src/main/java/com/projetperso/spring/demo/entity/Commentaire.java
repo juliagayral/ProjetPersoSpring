@@ -1,16 +1,13 @@
 package com.projetperso.spring.demo.entity;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
+import javax.persistence.*;
 import java.util.Date;
 
-@EntityScan
-@Table(name = "comments")
-public class Comment {
+@Entity
+@Table(name = "commentaires")
+public class Commentaire {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,13 +16,13 @@ public class Comment {
     private Date date;
     private Boolean like;
 
-    public Comment(String content, Date date, Boolean like) {
+    public Commentaire(String content, Date date, Boolean like) {
         this.content = content;
         this.date = date;
         this.like = like;
     }
 
-    public Comment(){}
+    public Commentaire(){}
 
     public Long getId() {
         return id;
